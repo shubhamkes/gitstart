@@ -23,38 +23,14 @@ console.log(
 
 if (files.directoryExists('.git')) {
     console.log(chalk.red('Already a git repository!'));
-    // @todo uncomment
-    // process.exit();
+    process.exit();
 }
-
-// const run = async () => {
-//     const credentials = await inquirer.askGithubCredentials();
-//     console.log(credentials);
-// }
-
 
 const run = async () => {
     try {
         // Retrieve & Set Authentication Token
         const token = await getGithubToken();
         github.githubAuth(token);
-
-        // try {
-        //     await git
-        //         // .init()
-        //         // .add('.gitignore')
-        //         // .add('./*')
-        //         // .commit('Initial commit')
-        //         // .addRemote('origin', 'git@github.com/shubhamkes/okla.git')
-        //         // .push('origin', 'master')
-        //         .push['-u', 'origin', 'master']
-        //     return true;
-        // } catch (err) {
-        //     throw err;
-        // } finally {
-        //     // status.stop();
-        // }
-        // return;
 
         // Create remote repository
         const url = await repo.createRemoteRepo();

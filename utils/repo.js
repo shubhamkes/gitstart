@@ -1,7 +1,8 @@
 const _ = require('lodash');
 const fs = require('fs');
 const git = require('simple-git')();
-const CLI = require('clui')
+const CLI = require('clui');
+const touch = require('touch');
 const Spinner = CLI.Spinner;
 
 const inquirer = require('./inquirer');
@@ -22,8 +23,6 @@ module.exports = {
         status.start();
 
         try {
-
-            // console.log('github', github.repos);
 
             const response = await github.repos.createForAuthenticatedUser(data);
             return response.data.clone_url;

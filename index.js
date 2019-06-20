@@ -1,23 +1,15 @@
 #!/usr/bin/env node
 
 const chalk = require('chalk');
-const clear = require('clear');
 const figlet = require('figlet');
-const Configstore = require('configstore');
 
-const files = require('./lib/files');
-const inquirer = require('./lib/inquirer');
-const github = require('./lib/github');
-const repo = require('./lib/repo');
+const files = require('./utils/files');
+const github = require('./utils/github');
+const repo = require('./utils/repo');
 
-const git = require('simple-git')();
-
-const conf = new Configstore('gitstart');
-
-clear();
 console.log(
-    chalk.yellow(
-        figlet.textSync('Drivezy Boilerplate', { horizontalLayout: 'full' })
+    chalk.blue(
+        figlet.textSync('gitstart', { horizontalLayout: 'full' })
     )
 );
 

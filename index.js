@@ -20,9 +20,8 @@ if (files.directoryExists('.git')) {
 
 const run = async () => {
     try {
-        // Retrieve & Set Authentication Token
-        const token = await getGithubToken();
-        github.githubAuth(token);
+        // Create Auth Object
+        await createAuthObject();
 
         // Create remote repository
         const url = await repo.createRemoteRepo();
@@ -52,19 +51,9 @@ const run = async () => {
     }
 }
 
-const getGithubToken = async () => {
-    // Fetch token from config store
-    let token = github.getStoredGithubToken();
-    if (token) {
-        return token;
-    }
-
-    // No token found, use credentials to access GitHub account
+const createAuthObject = async () => {
+    //Create Auth Object
     await github.setGithubCredentials();
-
-    // register new token
-    token = await github.registerNewToken();
-    return token;
 }
 
 run();

@@ -23,10 +23,9 @@ module.exports = {
         status.start();
 
         try {
-
-            const response = await github.repos.createForAuthenticatedUser(data);
-            return response.data.clone_url;
-            // return response.data.ssh_url;
+            const response = await github.request('POST /user/repos',data);
+            // return response.data.clone_url;
+            return response.data.ssh_url;
 
         } catch (err) {
             throw err;

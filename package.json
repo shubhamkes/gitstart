@@ -9,7 +9,7 @@
   "author": "shubham.kesarwani89@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "@octokit/rest": "^16.28.2",
+    "@octokit/rest": "^17.11.2",
     "chalk": "^2.4.2",
     "clui": "^0.3.6",
     "configstore": "^5.0.0",

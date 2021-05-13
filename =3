@@ -1,0 +1,4 @@
++ @octokit/core@3.4.0
+added 16 packages from 13 contributors, removed 9 packages, updated 33 packages, moved 3 packages and audited 133 packages in 13.733s
+found 9 vulnerabilities (4 low, 5 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

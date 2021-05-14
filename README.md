@@ -1,11 +1,39 @@
-# gitstart #
+<h1 align="center">Welcome to gitstart 👋</h1>
+<p>
+  <a href="https://www.npmjs.com/package/gitstart" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/gitstart.svg">
+  </a>
+</p>
 
-### a cool cli tool to instantly create git repository and sync with current working directory ###
-### You also to get to choose, files to be pushed to .gitignore ###
+> gitstart to create repository and sync it in just one command
 
+## Install
 
-### How do I get set up? ###
+```sh
+sudo npm install -g
+```
 
-* ```npm install -g``` or ```sudo npm install -g```
-* hit ```gitstart``` from your project directory
+## Usage
 
+```sh
+gitstart
+```
+
+## Run tests
+
+```sh
+npm run test
+```
+
+## Author
+
+👤 **shubham.kesarwani89@gmail.com**
+
+* Github: [@shubhamkes](https://github.com/shubhamkes)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
